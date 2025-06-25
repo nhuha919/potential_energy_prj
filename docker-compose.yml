@@ -1,0 +1,14 @@
+services:
+  ros2_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ros2_humble_m1
+    container_name: ros2_dev
+    network_mode: host
+    volumes:
+      - ./potential_energy_ws:/workspaces/potential_energy_ws
+    working_dir: /workspaces/potential_energy_ws
+    stdin_open: true
+    tty: true
+    command: bash

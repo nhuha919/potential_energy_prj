@@ -1,0 +1,21 @@
+{
+    "name": "ROS 2 Humble Dev",
+    "build": {
+      "dockerfile": "../Dockerfile",
+      "context": ".."
+    },
+    "runArgs": [
+      "--network=host"
+    ],
+    "workspaceFolder": "/workspaces/ros2_ws",
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "source /opt/ros/humble/setup.bash && colcon build || true",
+    "extensions": [
+      "ms-vscode.cpptools",
+      "ms-python.python",
+      "ms-iot.vscode-ros"
+    ]
+  }
+  
