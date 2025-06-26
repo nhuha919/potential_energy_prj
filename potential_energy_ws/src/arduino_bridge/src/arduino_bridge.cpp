@@ -13,9 +13,9 @@ public:
 
     try {
       socket_ = std::make_shared<tcp::socket>(io_service_);
-      tcp::endpoint endpoint(boost::asio::ip::make_address("172.20.10.2"), 8888);  // replace with Arduino IP
+      tcp::endpoint endpoint(boost::asio::ip::make_address("192.168.0.100"), 8888);  // replace with Arduino IP address
       socket_->connect(endpoint);
-      RCLCPP_INFO(this->get_logger(), "Connected to Arduino at 172.20.10.2: 8888"); // replace with Arduino IP
+      RCLCPP_INFO(this->get_logger(), "Connected to Arduino at 192.168.0.100: 8888"); // replace with Arduino IP address
     } catch (std::exception &e) {
       RCLCPP_ERROR(this->get_logger(), "Connection failed: %s", e.what());
     }
