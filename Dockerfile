@@ -1,5 +1,5 @@
 # Dockerfile
-FROM arm64v8/ros:humble
+FROM ros:humble
 
 # Setup environment
 ENV DEBIAN_FRONTEND=noninteractive
